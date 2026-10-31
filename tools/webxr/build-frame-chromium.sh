@@ -29,7 +29,7 @@ IWFDK_REF=${IWFDK_REF:-feat/frame-sdk}
 BUILD_TESTS=${BUILD_TESTS:-1}
 MIN_FREE_GB=${MIN_FREE_GB:-10}
 # Extra filesystems to keep free space on: the drive holding the WSL VHDX.
-GUARD_PATHS=${GUARD_PATHS:-$( [ -d /mnt/d ] && echo /mnt/d )}
+GUARD_PATHS=${GUARD_PATHS:-$( [ -d /mnt/d ] && echo /mnt/d || true )}
 
 mkdir -p "$W"
 W=$(cd "$W" && pwd)
